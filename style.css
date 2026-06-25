@@ -1,0 +1,168 @@
+/* --- Configurações Globais e Variáveis de Cores --- */
+:root {
+    --bg-principal: #f4f7f6;
+    --bg-card: #ffffff;
+    --texto-principal: #1a202c;
+    --texto-secundario: #4a5568;
+    --cor-primaria: #0056b3;
+    --cor-neon: #00f2fe;
+    --borda: #e2e8f0;
+    --sucesso: #2f855a;
+    --erro: #c53030;
+}
+
+/* Classes para o Modo Escuro (Ativadas via JS) */
+body.dark-mode {
+    --bg-principal: #0f172a;
+    --bg-card: #1e293b;
+    --texto-principal: #f8fafc;
+    --texto-secundario: #cbd5e1;
+    --cor-primaria: #38bdf8;
+    --borda: #334155;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--bg-principal);
+    color: var(--texto-principal);
+    transition: background-color 0.3s, color 0.3s;
+    line-height: 1.6;
+}
+
+/* --- Layout Avançado com Flexbox (Header e Container) --- */
+.header-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: var(--cor-primaria);
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px 40px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px; /* Espaçamento entre os cards */
+}
+
+/* --- Estilização dos Cards e Elementos --- */
+.card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--borda);
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.card h2 {
+    margin-bottom: 15px;
+    color: var(--cor-primaria);
+    border-bottom: 2px solid var(--borda);
+    padding-bottom: 8px;
+}
+
+/* Formulários e Inputs */
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+input[type="text"], input[type="url"], textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--borda);
+    border-radius: 6px;
+    background-color: transparent;
+    color: var(--texto-principal);
+}
+
+.opcao {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px;
+    border: 1px solid var(--borda);
+    border-radius: 6px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.opcao:hover {
+    background-color: rgba(0, 86, 179, 0.05);
+}
+
+/* Botões com efeito Hover Suave */
+.btn-primario, .btn-secundario {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.1s, opacity 0.2s;
+}
+
+.btn-primario {
+    background-color: var(--cor-primaria);
+    color: #ffffff;
+}
+
+.btn-secundario {
+    background-color: var(--borda);
+    color: var(--texto-principal);
+}
+
+.btn-primario:hover, .btn-secundario:hover {
+    opacity: 0.9;
+}
+
+.btn-primario:active {
+    transform: scale(0.98);
+}
+
+/* Dinâmicos do JS */
+.resultado-oculto {
+    display: none;
+    margin-top: 15px;
+    padding: 15px;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    color: var(--texto-secundario);
+    border-top: 1px solid var(--borda);
+}
+
+/* --- Responsividade (Media Queries) --- */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+    .card {
+        padding: 15px;
+    }
+    .btn-primario, .btn-secundario {
+        width: 100%; /* Botões ocupam largura total em telas pequenas */
+    }
+}
