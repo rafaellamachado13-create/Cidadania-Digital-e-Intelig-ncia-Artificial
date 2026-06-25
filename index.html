@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Cidadania Digital e IA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <h1>Cidadania Digital & IA</h1>
+            <p>Conscientização contra Deepfakes e Desinformação</p>
+            <button id="btn-tema" class="btn-secundario">Alternar Modo Escuro</button>
+        </div>
+    </header>
+
+    <main>
+        
+        <section id="sobre" class="card">
+            <h2>O Impacto das Deepfakes</h2>
+            <p>As <strong>deepfakes</strong> utilizam algoritmos de Inteligência Artificial para adulterar rostos e vozes com alta precisão. Quando usadas para espalhar desinformação automatizada, podem prejudicar reputações e manipular a opinião pública. Desenvolver o pensamento crítico é o nosso principal escudo.</p>
+        </section>
+
+        <section id="quiz" class="card">
+            <h2>Quiz: Você sabe identificar uma IA?</h2>
+            <p>Teste seus conhecimentos sobre mídias manipuladas:</p>
+            
+            <form id="form-quiz">
+                <div class="grupo-pergunta">
+                    <p class="pergunta-texto">Qual destas alternativas apresenta um rastro comum deixado por uma deepfake de vídeo?</p>
+                    
+                    <label class="opcao">
+                        <input type="radio" name="pergunta1" value="errado">
+                        <span>Piscadas de olhos e movimentos perfeitamente naturais.</span>
+                    </label>
+                    
+                    <label class="opcao">
+                        <input type="radio" name="pergunta1" value="correto">
+                        <span>Sombras desalinhadas, contornos borrados e falhas ao redor da boca.</span>
+                    </label>
+                    
+                    <label class="opcao">
+                        <input type="radio" name="pergunta1" value="errado">
+                        <span>Áudio perfeitamente sincronizado com os lábios.</span>
+                    </label>
+                </div>
+
+                <button type="button" id="btn-verificar" class="btn-primario">Verificar Resposta</button>
+            </form>
+
+            <div id="resultado-quiz" class="resultado-oculto"></div>
+        </section>
+
+        <section id="denuncia" class="card">
+            <h2>Central de Alerta Comunitário</h2>
+            <p>Encontrou um conteúdo suspeito na internet? Envie para análise da comunidade.</p>
+            
+            <form id="form-denuncia">
+                <div class="campo">
+                    <label for="nome">Seu Nome:</label>
+                    <input type="text" id="nome" required placeholder="Digite seu nome completo">
+                </div>
+
+                <div class="campo">
+                    <label for="url">Link da Mídia Suspeita:</label>
+                    <input type="url" id="url" required placeholder="https://exemplo.com/video-suspeito">
+                </div>
+
+                <div class="campo">
+                    <label for="detalhes">Por que você suspeita que seja IA?</label>
+                    <textarea id="detalhes" rows="4" required placeholder="Ex: A voz parece robótica e o fundo do vídeo está distorcido."></textarea>
+                </div>
+
+                <button type="submit" class="btn-primario">Enviar Relato</button>
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Portal Cidadania Digital. Projeto focado em Ética Digital e IA.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
